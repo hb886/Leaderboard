@@ -103,7 +103,7 @@ const Mainbox = () => {
       </ul>
 
       <ul className="list">
-        {sortedEntries.map((entry, index) => (
+        {sortedEntries.slice(0, 10).map((entry, index) => (
           <li key={index} className={entry === newEntry ? "new-entry" : ""}>
             <div className="flex-container">
               <div className="flex-item">{(index + 1).toString().padStart(2, '0')}</div>
