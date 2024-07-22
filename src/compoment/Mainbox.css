@@ -1,10 +1,35 @@
-.mainbox{
-    overflow-x: hidden;
-    overflow-y: auto;
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.list li {
+  list-style: none;
+  padding: 1%;
+  width: 50%;
+  border-radius: 8px;
+  margin: 8px 0;
+  background: linear-gradient(to right, red, orange, blue);
+}
+
+.new-entry {
+  animation: slideInFromLeft 1.25s ease-in-out;
+  background: linear-gradient(to right, red, orange, blue);
+
+}
+
+.mainbox {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .form {
-  /* background-color: yellow; */
   position: relative;
   top: 5%;
   display: flex;
@@ -26,32 +51,9 @@
   position: relative;
   top: 8%;
   width: 100%;
-}
-
-.list li {
-  list-style: none;
-  padding: 1%;
-  width: 50%;
-  background-color: rgba(0, 0, 0, 0.588);
-  border-radius: 8px;
-  margin: 8px 0;
-}
-
-.list li p {
-  font-size: 1.5rem;
-  color: yellow;
-}
-
-.list {
   padding: 0;
   margin: 0;
   list-style-type: none;
-}
-
-.list-item {
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-  padding: 10px;
 }
 
 .flex-container {
@@ -63,10 +65,13 @@
 .flex-item {
   flex: 1 1 25%;
   padding: 5px;
-  color: #ffff;
-  letter-spacing: 2.5;
+  letter-spacing: 2.5px;
 }
 
 .flex-item.label {
   font-weight: bold;
+}
+
+.list li p {
+  font-size: 1.5rem;
 }
