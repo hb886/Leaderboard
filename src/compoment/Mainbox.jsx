@@ -8,11 +8,21 @@ const Mainbox = () => {
     backgroundColor: "red",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    height: "100vh",
+    height: "75vh",
     width: "100%",
   };
 
   const [playerInfo, setPlayerInfo] = useState([
+    { name: "Rahul", time: "12:00:00" },
+    { name: "Ajay", time: "14:30:45" },
+    { name: "Prakash", time: "09:00:00" },
+    { name: "Rahul", time: "12:00:00" },
+    { name: "Ajay", time: "14:30:45" },
+    { name: "Prakash", time: "09:00:00" },
+    { name: "Prakash", time: "09:00:00" },
+    { name: "Rahul", time: "12:00:00" },
+    { name: "Ajay", time: "14:30:45" },
+    { name: "Prakash", time: "09:00:00" },
     { name: "Rahul", time: "12:00:00" },
     { name: "Ajay", time: "14:30:45" },
     { name: "Prakash", time: "09:00:00" },
@@ -104,7 +114,7 @@ const Mainbox = () => {
 
       <ul className="list">
         {sortedEntries.slice(0, 10).map((entry, index) => (
-          <li key={index} className={entry === newEntry ? "new-entry" : ""}>
+          <li key={index} className={entry === newEntry ? "new-entry" : "entry"}>
             <div className="flex-container">
               <div className="flex-item">{(index + 1).toString().padStart(2, '0')}</div>
               <div className="flex-item">{entry.name}</div>
