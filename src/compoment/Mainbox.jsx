@@ -8,7 +8,7 @@ const Mainbox = () => {
     backgroundColor: "red",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    height: "75vh",
+    height: "81.5vh",
     width: "100%",
   };
 
@@ -101,7 +101,7 @@ const Mainbox = () => {
         </button>
       </form>
 
-      <ul className="list">
+      {/* <ul className="list">
         <li>
           <div className="flex-container">
             <div className="flex-item" style={{ fontWeight: '500' }}>🏆 Rank</div>
@@ -110,10 +110,10 @@ const Mainbox = () => {
             <div className="flex-item" style={{ fontWeight: '500' }}>🕐 Time</div>
           </div>
         </li>
-      </ul>
+      </ul> */}
 
       <ul className="list">
-        {sortedEntries.slice(0, 10).map((entry, index) => (
+        {sortedEntries.map((entry, index) => (
           <li key={index} className={entry === newEntry ? "new-entry" : "entry"}>
             <div className="flex-container">
               <div className="flex-item">{(index + 1).toString().padStart(2, '0')}</div>
